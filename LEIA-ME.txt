@@ -1,0 +1,41 @@
+MEDCONTROL — PACOTE PWA (v2.2.0)
+================================
+
+ARQUIVOS
+  index.html                 o app
+  manifest.webmanifest       identidade (nome, cor, ícones)
+  sw.js                      offline + atualização automática
+  icon-192.png               ícone Android
+  icon-512.png               ícone Android (alta resolução / splash)
+  icon-maskable-512.png      ícone adaptativo (Android recorta em círculo)
+  apple-touch-icon.png       ícone iPhone / iPad (180x180)
+  icon.svg                   ícone vetorial
+
+REGRA DE OURO
+  Todos os arquivos ficam na MESMA PASTA. Não crie subpastas.
+
+COMO PUBLICAR (escolha um)
+
+  Netlify (mais rápido)
+  1. Acesse app.netlify.com/drop
+  2. Arraste a PASTA inteira (não o .zip) para a página
+  3. Copie o link gerado
+
+  GitHub Pages
+  1. Suba os arquivos na raiz do repositório
+  2. Settings -> Pages -> Branch: main -> pasta / (root) -> Save
+  3. Aguarde ~1 min e abra o link
+
+COMO INSTALAR NO CELULAR
+  Android (Chrome): abra o link -> menu (3 pontinhos) -> "Instalar app"
+  iPhone (Safari):  abra o link -> botão Compartilhar -> "Adicionar à Tela de Início"
+                    (no iPhone só funciona pelo Safari)
+
+IMPORTANTE
+  O PWA só instala em HTTPS. Abrir o index.html direto do celular (file://)
+  não instala e não funciona offline — precisa estar publicado.
+
+ATUALIZAR O APP
+  Ao trocar o index.html, altere também a versão no sw.js:
+  const CACHE = 'medcontrol-2.1.0';  ->  'medcontrol-2.1.1'
+  Sem isso o celular continua mostrando a versão antiga.
